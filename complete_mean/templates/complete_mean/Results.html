@@ -1,0 +1,22 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+  Resultados
+{% endblock %}
+
+{% block content %}
+<p>
+  Tu jugaste {{ my_decision }}
+</p>
+
+    {% if round_number == 1 %}
+      Esta es una ronde de prueba
+    {% else %}
+    <p>
+      Como resultado, ganaste {{ player.payoff }} esta ronda. El pago promedio del grupo fue de {{promedio}}
+    </p>
+    {% endif %}
+
+    {% next_button %}
+{% endblock %}

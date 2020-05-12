@@ -1,0 +1,59 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+
+{% block title %}
+        Instrucciones
+{% endblock %}
+
+
+
+{% block content %}
+    <p>
+        <h3>Matrices de Pago</h3>
+    Para esta actividad, es importante entender una matriz de pago básica. Es por ello
+    que se le solicita leer con atención la siguiente imagen que lo explica:
+
+    </p>
+<img src="{% static "control/Mat_Pagos.png" %}" class="center" width="100%" height="70%" />
+    <p>
+        <h3>Instrucciones de pago en esta actividad</h3>
+        En cada ronda, usted recibirá puntos tomando en cuenta las decisiones que haga.
+        Pero también se consideran las decisiones de todos los otros participantes en este sesión;
+        estas decisiones se agrupan por medio de un ponderado W1, W2 (cantidad de participantes que
+        toman decisión A o B respectivamente, sobre total de participantes en la sesión) que mide
+        la proporción de otros participantes(menos usted),que tomaron las decisiones A o B, con las reglas de pago como siguen:
+
+    </p>
+    <p>
+    <ol>
+        <li>Si elige A, entonces usted recibe un ponderado de los pagos posibles para esta estrategia, esto es W1 x (50) + W2 x (60)</li>
+        <li>Si elige B, entonces usted recibe un ponderado de los pagos posibles para esta estrategia, esto es W1 x (5) + W2 x (100)</li>
+    </ol>
+    </p>
+
+    <p>
+        Donde los valores que multiplican los ponderados W1 y W2 son los que se visualizaran en la 
+        matriz de todas las rondas.
+
+    </p>
+
+    <p>
+        <h3>Ronda de Práctica</h3>
+        Antes de empezar con las rondas pagadas, usted enfrentará una ronda de prueba (no remunerada)
+        para que pueda familiarizarse con lo que se despliega en la pantalla del computador.
+
+    </p>
+
+    <p>
+        <h3>Ganancias</h3>
+        Al final de cada ronda, recibirá información relacionada con los puntos que obtuvo en la
+        ronda en cuestión, la elección que tomó, así como las ganancias promedio de los mismos.
+        Al final del experimento, recibirá un pago en dólares en correspondencia con los puntos que
+        ha obtenido, además del pago por participar.
+
+    </p>
+
+    {% next_button %}
+{% endblock %}

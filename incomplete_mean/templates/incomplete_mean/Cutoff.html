@@ -1,0 +1,104 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    El menor n&uacutemero por el cual seleccionar&iacuteas A
+{% endblock %}
+
+{% block styles %}
+<link href="{% static "hdth/jquery-ui/jquery-ui.min.css" %}" rel="stylesheet">
+<style type="text/css">
+    .cutoff-slider {
+        margin: 1.5em auto;
+        width: 70%;
+    }
+
+    .cuto {
+        text-align: center;
+    }
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="form-group required">
+        <label class="control-label" for="id_cutoff_amount">
+            Elige un n&uacutemero (entre 0 y 101 ):</label>
+        <div class="controls">
+            <input type="hidden" name="cutoff" id="id_cutoff_amount" value="0">
+            <div class="cutoff-slider"></div>
+            <div class="cuto"> <!-- Your choice -->Tu elecci&oacuten <strong><span class="cutoff-value"></span></strong></div>
+
+           <table class="table table-bordered text-center" style="width: auto; margin: auto">
+            <tr>
+                <th colspan="2" rowspan="2"></th>
+                <th colspan="2"><!-- The Other Participant-->El Otro Participante</th>
+            </tr>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+            </tr>
+            <tr class="highlight-row-on-hover">
+                <th rowspan="2"><span class="rotate90"><!--You--> T&uacute</span></th>
+                <th>A</th>
+                <td><div> <strong><span class="cutoff-value"></span></strong>, </div> NN <!--points-->puntos </td>
+                <td><div> <strong><span class="cutoff-value1"></span></strong>, </div> {{dh_payoff}} </td>
+            </tr>
+            <tr class="highlight-row-on-hover">
+                <th>B</th>
+                <td> <p> <strong>{{dh_payoff}}</strong>,</p>  NN+{{mu_pay}} <!--points-->puntos  </td>
+                <td> <p> <strong>{{dd_payoff}}</strong>,</p> {{dd_payoff}}</td>
+            </tr>
+        </table>
+
+
+
+        </div>
+    </div>
+
+    {% next_button %}
+
+
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{% static "hdth/jquery-ui/jquery-ui.min.js" %}"></script>
+<script>
+jQuery(document).ready(function ($) {
+    var input = $('#id_cutoff_amount');
+    $('.cutoff-slider').slider({
+        min: 0,
+        max: 101,
+        slide: function (event, ui) {
+            input.val(ui.value);
+            updateCutOffValue();
+            updateCutOffValue1();
+        },
+    });
+
+    function updateCutOffValue() {
+        var val = parseInt(input.val(),10)
+        var mina = Math.min(val,100)
+        $('.cutoff-value').text(val);
+    }
+
+    function updateCutOffValue1() {
+        var val1 = parseInt(input.val(),10);
+        var sum  = val1 + 10;
+        $('.cutoff-value1').text(sum);
+
+    }
+
+
+    updateCutOffValue();
+    updateCutOffValue1();
+
+});
+
+
+
+</script>
+{% endblock %}

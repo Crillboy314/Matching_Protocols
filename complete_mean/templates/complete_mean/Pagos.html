@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Muchas gracias por participar en este experimento.
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        <em> Los puntos totales que obtuviste son {{pago_final}} y en USD son {{pago_USD}}, ya adicionando el pago garantizado por participar.</em>
+    </p>
+    <p>
+        <em> Antes de proceder con el pago, por favor llena la encuesta a continuación:</em>
+    </p>
+
+    {% next_button %}
+
+
+
+{% endblock %}
+

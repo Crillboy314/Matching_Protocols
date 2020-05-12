@@ -1,0 +1,23 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+  Resultados
+{% endblock %}
+
+{% block content %}
+
+  <p>
+    {% if same_choice %}
+      Usted y su oponente han decidido: {{ my_decision }}
+    {% else %}
+      Tu elegiste {{ my_decision }} mientras que tu oponente eligio {{ other_player_decision }}.
+    {% endif %}
+  </p>
+
+  <p>
+    Como resultado, ganaste {{ player.payoff }} esta ronda.
+  </p>
+
+    {% next_button %}
+{% endblock %}

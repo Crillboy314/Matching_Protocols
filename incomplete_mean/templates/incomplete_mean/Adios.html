@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+   Para terminar, por favor respondes las siguientes preguntas:
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.gender label='Elige el genero con el que te identificas' %}
+
+
+    {% next_button %}
+
+{% endblock %}

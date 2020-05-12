@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% block title %}
+    Resultados 
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+        Tú jugaste {{ my_decision }} puesto que:
+    </p>
+    {% if oneshot or morningplayer%}
+
+        {% if my_cutoff > my_privatepi %}
+    <p>
+         El número aleatorio de {{my_privatepi}} fue menor que tu elección de {{my_cutoff}}.
+    </p>
+        {% else %}
+    <p>
+         El nuúmero aleatorio de {{my_privatepi}} no fue menor que tu elección de {{my_cutoff}}.<!--The realized number of {{my_privatepi}} was not smaller than your choice of {{my_cutoff}}.-->
+    </p>
+        {% endif %}
+    {% endif %}
+
+    {% if round_number == 1 %}
+    <p>
+         Esta es una ronda de prueba
+    </p>
+        {% else %}
+    <p>
+        De esta forma, tu ganaste {{ player.payoff }}. El pago promedio de la ronda anterior fue de {{promedio}}
+    </p>
+        {% endif %}
+
+
+    {% next_button %}
+
+
+
+{% endblock %}

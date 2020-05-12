@@ -1,0 +1,122 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+
+{% block title %}
+        Instrucciones
+{% endblock %}
+
+{% block content %}
+    <p>
+      <h3>Matrices de Pago</h3>
+    Para esta actividad, es importante entender una matriz de pago básica. Es por ello
+    que se le solicita leer con atención la siguiente imagen que lo explica:
+
+    </p>
+<img src="{% static "control/Mat_Pagos.png" %}" class="center" width="100%" height="70%" />
+    <p>
+      <h3>Instrucciones de pago en esta actividad</h3>
+        En cada ronda, usted y el otro participante con el que fue emparejado recibirán puntos
+        tomando en cuenta la tabla:
+
+    </p>
+    <p>
+        <body>
+
+            <h3>Tabla de Pagos</h3>
+
+            <table style="width:100%">
+              <tr>
+                <th>Decisión</th>
+                <th>Otro Participante decide A</th>
+                <th>Otro Participante decide B</th>
+              </tr>
+              <tr>
+                <td>Decide A</td>
+                <td>X puntos, Y puntos</td>
+                <td>X + 10 puntos, 5 puntos</td>
+
+              </tr>
+              <tr>
+                <td>Decide B</td>
+                <td>5 puntos, Y + 10 puntos</td>
+                <td>100 puntos, 100 puntos</td>
+
+              </tr>
+            </table>
+
+            </body>
+        </p>
+    <p>
+        Donde las decisiones suyas y del jugador con el que fue emparejado condicionan los puntos
+        recibidos tomando en cuenta las siguientes reglas:
+    </p>
+    <p>
+        <ol>
+            <li> <strong>Si ambos eligen A</strong>, Entonces usted recibes X puntos y el otro participante recibe Y puntos.</li>
+            <li> <strong>Si usted decide A y el otro participante B</strong>, Entonces usted recibe X + 10 puntos y el otro participante recibe 5 puntos.</li>
+            <li> <strong>Si usted decide B y el otro participante A</strong>, Entonces usted recibe 5 puntos y el otro participante recibe Y + 10 puntos.</li>
+            <li> <strong>Si ambos eligen B</strong>, Entonces usted y el otro participante reciben 100 puntos.</li>
+        </ol>
+        </p>
+
+    <p>
+    Los nuúmeros aleatorios X y y se obtienen de un rango entre [0,100] donde todos los números tienen la misma probabilidad de ser escogidos.
+    Al final de la ronda, usted sabrá que número X fue escogido aleatoriamente, pero no conocerá el valor Y del otro participante.
+    </p>
+
+    <p>
+    La decisión sobre las acciones A o B también están condicionadas y se toman antes de conocer el número
+    aleatorio X. El juego funciona de la siguiente forma: Usted escoge el número más pequeño en el rango[0,100]
+    por el cual escogería la acción A con la ayuda de un deslizador. La tabla a continuación especifica
+    como se toma la acción A o B:
+    </p>
+    <p>
+        <body>
+
+            <h3>Tabla de Decisiones</h3>
+
+            <table style="width:100%">
+              <tr>
+                <th>Decisión</th>
+                <th>Comparación</th>
+              </tr>
+              <tr>
+                <td>Decidir A</td>
+                <td>Numero escogido > X</td>
+
+              </tr>
+              <tr>
+                <td>Decidir B</td>
+                <td>Numero escogido &#8804  X</td>
+
+              </tr>
+            </table>
+
+            </body>
+        </p>
+    <p>
+    Recuerde que dado que usted escoge en el deslizador antes de conocer el número aleatorio, su
+    elección final así como la de los otros participantes, estarán condicionadas al numero escogido.
+    </p>
+
+    <p>
+        <h3>Ronda de Práctica</h3>
+        Antes de empezar con las rondas pagadas, usted enfrentará una ronda de prueba (no remunerada)
+        para que pueda familiarizarse con lo que se despliega en la pantalla del computador.
+
+    </p>
+
+    <p>
+        <h3>Ganancias</h3>
+        Al final de cada ronda, recibirá información relacionada con los puntos que obtuvo en la
+        ronda en cuestión, la elección que tomó, así como las ganancias promedio de los mismos.
+        Al final del experimento, recibirá un pago en dólares en correspondencia con los puntos que
+        ha obtenido, además del pago por participar.
+
+    </p>
+
+    {% next_button %}
+{% endblock %}
+

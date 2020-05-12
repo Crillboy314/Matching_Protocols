@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+   Antes que te vayas, por favor responde la siguiente pregunta
+{% endblock %}
+
+{% block content %}
+
+    {% formfield player.gender label='Por favor, elige tu genero' %}
+
+    {% next_button %}
+
+{% endblock %}
