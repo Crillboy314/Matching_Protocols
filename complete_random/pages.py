@@ -36,8 +36,9 @@ class Results(Page):
         self.player.set_payoff()
 
         return{
-            'my_decision': self.player.decision.lower(),
-            'other_player_decision': self.player.other_player().decision.lower(),
+            'my_decision': self.player.decision.upper(),
+            'other_player_decision': self.player.other_player().decision.upper(),
+            'payoff_otro': self.player.other_player().payoff,
             'same_choice': self.player.decision == self.player.other_player().decision,
         }
 
