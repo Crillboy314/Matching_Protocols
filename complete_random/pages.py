@@ -39,6 +39,7 @@ class Results(Page):
             'my_decision': self.player.decision.upper(),
             'other_player_decision': self.player.other_player().decision.upper(),
             'payoff_otro': self.player.other_player().payoff,
+            'round_number': self.subsession.round_number,
             'same_choice': self.player.decision == self.player.other_player().decision,
         }
 

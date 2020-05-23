@@ -15,9 +15,15 @@
     {% endif %}
   </p>
 
-  <p>
-    Como resultado, ganaste {{ player.payoff }} esta ronda, mientrás que el otro jugador gano {{payoff_otro}}
-  </p>
+  {% if round_number == 1 %}
+  Esta es una ronde de prueba
+{% else %}
+<p>
+  Como resultado, ganaste {{ player.payoff }} esta ronda, mientrás que el otro jugador gano {{payoff_otro}}
+</p>
+{% endif %}
+
+  
 
     {% next_button %}
 {% endblock %}
