@@ -53,7 +53,8 @@
 
     <div class="form-group required">
         <label class="control-label" for="id_cutoff_amount">
-            Elija un n&uacutemero entre 0 y 101, además consideré que NN es el número aleatorio del otro:</label>
+            Elija un n&uacutemero entre 0 y 101, recuerde que W1, W2 son las ponderaciones de la cantidad de jugadores
+            en esta ronda que respondieron con la estrategia A o B respectivamente:</label>
         <div class="controls">
             <input type="hidden" name="cutoff" id="id_cutoff_amount" value="0">
             <div class="cutoff-slider"></div>
@@ -71,16 +72,16 @@
             <tr class="highlight-row-on-hover">
                 <th rowspan="2"><span class="rotate90"><!--You--> Usted</span></th>
                 <th>A</th>
-                <td><div> <strong><span class="cutoff-value"></span></strong>, </div> NN <!--points-->puntos </td>
-                <td><div> <strong><span class="cutoff-value1"></span></strong>, </div> {{dh_payoff}} </td>
+                <th colspan="2"><!-- The Other Participant--><strong>W1 * <span class="cutoff-value"></span> puntos</strong> + <strong>W2 * <span class="cutoff-value1"></span> puntos</strong> </th>
             </tr>
             <tr class="highlight-row-on-hover">
                 <th>B</th>
-                <td> <p> <strong>{{dh_payoff}}</strong>,</p>  NN+{{mu_pay}} <!--points-->puntos  </td>
-                <td> <p> <strong>{{dd_payoff}}</strong>,</p> {{dd_payoff}}</td>
+                <th colspan="2"><!-- The Other Participant--><strong>W1 * {{dh_payoff}}</strong> + <strong>W2 * {{dd_payoff}}</strong> </th>
             </tr>
         </table>
 
+        
+       
 
 
         </div>
