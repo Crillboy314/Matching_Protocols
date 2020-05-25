@@ -11,7 +11,7 @@
     {% if same_choice %}
       Usted y su oponente han decidido: {{ my_decision }}
     {% else %}
-      Tu elegiste {{ my_decision }} mientras que tu oponente eligio {{ other_player_decision }}.
+      Usted eligió {{ my_decision }} mientras que su oponente eligió {{ other_player_decision }}.
     {% endif %}
   </p>
 
@@ -19,7 +19,7 @@
   Esta es una ronde de prueba
 {% else %}
 <p>
-  Como resultado, ganaste {{ player.payoff }} esta ronda, mientrás que el otro jugador gano {{payoff_otro}}
+  Como resultado, usted ganó {{ player.payoff }} esta ronda, mientrás que el otro jugador ganó {{payoff_otro}}
 </p>
 {% endif %}
 
