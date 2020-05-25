@@ -7,14 +7,14 @@
 
 {% block content %}
 <p>
-  Tu jugaste {{ my_decision }}
+  Usted jugó {{ my_decision }}
 </p>
 
     {% if round_number == 1 %}
       Esta es una ronde de prueba
     {% else %}
     <p>
-      Como resultado, ganaste {{ player.payoff }} esta ronda. El pago promedio del grupo fue de {{promedio}}
+      Como resultado, usted ganó {{ player.payoff }} esta ronda. El pago promedio del grupo fue de {{promedio}}
     </p>
     {% endif %}
 
