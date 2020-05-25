@@ -17,6 +17,10 @@ class Welcome(Page):
 class Instructions(Page):
     def is_displayed(self):
         return self.round_number == 1
+    def vars_for_template(self):
+        return {
+            'rate': self.session.config["real_world_currency_per_point"],
+        }
 
 
 class Cutoff(Page):
