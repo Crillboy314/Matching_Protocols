@@ -2,7 +2,7 @@
 {% load otree static %}
 
 {% block title %}
-    El menor n&uacutemero por el cual seleccionar&iacuteas A
+    El menor n&uacutemero por el cual seleccionar&iacutea A
 {% endblock %}
 
 {% block styles %}
@@ -23,13 +23,41 @@
 
 {% block content %}
 
+<div>
+
+    <body>
+
+        <h4>Recuerde como se determinaban las decisiones</h4>
+
+        <table style="width:100%">
+          <tr>
+            <th>Decisión</th>
+            <th>Comparación</th>
+          </tr>
+          <tr>
+            <td>Decidir A</td>
+            <td>Numero escogido > X</td>
+
+          </tr>
+          <tr>
+            <td>Decidir B</td>
+            <td>Numero escogido &#8804 X</td>
+
+          </tr>
+        </table>
+
+        </body>
+</div>
+
+<div><br><br></div>
+
     <div class="form-group required">
         <label class="control-label" for="id_cutoff_amount">
-            Elige un n&uacutemero (entre 0 y 101 ):</label>
+            Elija un n&uacutemero entre 0 y 101, además consideré que NN es el número aleatorio del otro:</label>
         <div class="controls">
             <input type="hidden" name="cutoff" id="id_cutoff_amount" value="0">
             <div class="cutoff-slider"></div>
-            <div class="cuto"> <!-- Your choice -->Tu elecci&oacuten <strong><span class="cutoff-value"></span></strong></div>
+            <div class="cuto"> <!-- Your choice -->Su elecci&oacuten <strong><span class="cutoff-value"></span></strong></div>
 
            <table class="table table-bordered text-center" style="width: auto; margin: auto">
             <tr>
@@ -41,7 +69,7 @@
                 <th>B</th>
             </tr>
             <tr class="highlight-row-on-hover">
-                <th rowspan="2"><span class="rotate90"><!--You--> T&uacute</span></th>
+                <th rowspan="2"><span class="rotate90"><!--You--> Usted</span></th>
                 <th>A</th>
                 <td><div> <strong><span class="cutoff-value"></span></strong>, </div> NN <!--points-->puntos </td>
                 <td><div> <strong><span class="cutoff-value1"></span></strong>, </div> {{dh_payoff}} </td>
@@ -56,7 +84,11 @@
 
 
         </div>
+
+        
     </div>
+    
+
 
     {% next_button %}
 

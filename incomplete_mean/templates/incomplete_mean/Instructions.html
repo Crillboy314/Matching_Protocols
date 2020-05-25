@@ -18,7 +18,9 @@
     <p>
       <h3>Instrucciones de pago en esta actividad</h3>
         En cada ronda, usted recibirá puntos tomando en cuenta las decisiones que haga.
-        Pero también se toman en cuentas las decisiones de todos los otros participantes en este sesión;
+        <br>
+        <br>
+        También se toman en cuentas las decisiones de todos los otros participantes en este sesión;
         estas decisiones se agrupan por medio de un ponderado W1,W2 (cantidad de participantes que
         toman decisión A o B respectivamente, sobre total de participantes en la sesión) que mide la proporción de otros
         participantes(menos usted),que tomaron las decisiones A o B, con las reglas de pago como siguen:
@@ -26,8 +28,16 @@
     </p>
     <p>
     <ol>
-        <li>Si elige A, entonces usted recibe un ponderado de los pagos posibles para esta estrategia, esto es W1 X + W2 (X + 10)</li>
-        <li>Si elige B, entonces usted recibe un ponderado de los pagos posibles para esta estrategia, esto es W1 (5) + W2 (100)</li>
+        <li>Si elige A, entonces usted recibe un ponderado de los pagos posibles para esta estrategia: <br>
+          <br>
+          W1 * (Pago si jugué A y oponente A) + W2 (Pago si jugué A y oponente B)</li>
+          <br>
+          <br>
+        <li>Si elige B, entonces usted recibe un ponderado de los pagos posibles para esta estrategia: <br>
+          <br>
+          W1 * (Pago si jugué B y oponente A) + W2 (Pago si jugué B y oponente B)
+
+        </li>
     </ol>
     </p>
     <p>
@@ -35,22 +45,23 @@
       matriz de todas las rondas.
 
     </p>
-
+        <h3>Toma de decisiones</h3>
     <p>
-    El número aleatorio X se obtienen de un rango entre [0,100] donde todos los números tienen la misma probabilidad de ser escogidos.
+    En cada ronda, usted recibirá un número aleatorio X que se obtienen de un rango entre [0,100] donde todos los números 
+    tienen la misma probabilidad de ser escogidos.
     Al final de la ronda, usted sabrá que número X fue escogido aleatoriamente.
     </p>
 
     <p>
     La decisión sobre las acciones A o B también están condicionadas y se toman antes de conocer el número
-    aleatorio X. El juego funciona de la siguiente forma: Usted escoge el número más pequeño en el rango[0,100]
-    por el cual escogería la acción A con la ayuda de un deslizador. La tabla a continuación especifica
-    como se toma la acción A o B:
+    aleatorio X. El juego funciona de la siguiente forma: Usted escoge el número más pequeño en el rango [0,100]
+    por el cual escogería la acción A con la ayuda de un deslizador; la tabla a continuación (misma que podrá visualizar 
+    en cada página de decisión) especifica como se toma la acción A o B:
     </p>
     <p>
     <body>
 
-        <h3>Tabla de Decisiones</h3>
+        <h4>Tabla de Decisiones</h4>
 
         <table style="width:100%">
           <tr>
@@ -72,7 +83,7 @@
         </body>
     </p>
     <p>
-    Recuerda que dado que usted escoge en el deslizador antes de conocer el número aleatorio, su
+    Recuerde que dado que usted escoge en el deslizador antes de conocer el número aleatorio, su
     elección final así como la de los otros participante estarán condicionadas al numero escogido. Cada participante 
     se le asigna un nuúmero aleatorio distinto.
     </p>
@@ -89,7 +100,7 @@
         Al final de cada ronda, recibirá información relacionada con los puntos que obtuvo en la
         ronda en cuestión, la elección que tomó, así como las ganancias promedio de los mismos.
         Al final del experimento, recibirá un pago en dólares en correspondencia con los puntos que
-        ha obtenido, además del pago por participar.
+        ha obtenido tomando en cuenta la tasa de cambio de {{ rate }} $ por cada punto, además del pago por participar.
 
     </p>
 
