@@ -13,7 +13,7 @@ doc = """
 class Constants(BaseConstants):
     name_in_url = 'inc_rand'
     players_per_group = 2
-    num_rounds = 11
+    num_rounds = 19
 
 
 class Subsession(BaseSubsession):

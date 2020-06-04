@@ -63,8 +63,8 @@ class Results(Page):
             'other_player_decision': self.player.other_player().decision,
             'same_choice': self.player.decision == self.player.other_player().decision,
             'player_in_all_rounds': player_in_all_rounds,
-            'total A': self.subsession.totalA,
-            'total B': self.subsession.totalB,
+            'total_A': self.subsession.totalA,
+            'total_B': self.subsession.totalB,
             'promedio': round_average,
             'round_number': self.subsession.round_number
         }

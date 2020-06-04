@@ -8,7 +8,7 @@
 
 
     <p>
-        Usted jugó {{ my_decision }} puesto que:
+       <strong>Usted jugó {{ my_decision }}</strong>  puesto que:
     </p>
     {% if oneshot or morningplayer%}
 
@@ -28,12 +28,17 @@
          Esta es una ronda de prueba
     </p>
         {% else %}
+
     <p>
-        De esta forma, usted ganó {{ player.payoff }}. El pago promedio de la ronda anterior fue de {{promedio}}
+        Tomando en cuenta su decisión. En esta ronda, <strong> {{ total_A }} jugadores tomaron estrategia A </strong> , 
+        mientras que <strong>{{ total_B }} jugadores tomaron estrategia B</strong>.
+    </p>
+    <p>
+        De esta forma,<strong> usted ganó {{ player.payoff }}</strong> . El pago promedio de la ronda anterior fue de <strong>{{promedio}}</strong> 
     </p>
         {% endif %}
 
-
+        
     {% next_button %}
 
 

@@ -8,7 +8,7 @@
 
 
     <p>
-        Usted jugó {{ my_decision }}, puesto que:
+       <strong>Usted jugó {{ my_decision }}</strong>, puesto que:
     </p>
     {% if oneshot or morningplayer or twonightplayers%}
 
@@ -28,7 +28,14 @@
     </p>
         {% else %}
     <p>
-        Con estas decisiones, su pago fue de {{ player.payoff }}, mientrás que el otro jugador ganó {{payoff_otro}}
+        El otro jugador <strong>tomó decisión {{ other_player_decision }}</strong>. 
+
+    </p>
+
+    <p>
+        Con estas decisiones, <strong>su pago fue de {{ player.payoff }}</strong> , mientrás que el 
+        <strong>otro jugador ganó {{payoff_otro}}</strong>
+
     </p>
         {% endif %}
 
