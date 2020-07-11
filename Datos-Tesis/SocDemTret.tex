@@ -1,0 +1,52 @@
+\documentclass{report}
+\usepackage{booktabs}
+\begin{document}\begin{center}
+\begin{tabular}{lclc}
+\toprule
+\textbf{Dep. Variable:}            &     Payment      & \textbf{  R-squared:         } &     0.321   \\
+\textbf{Model:}                    &       OLS        & \textbf{  Adj. R-squared:    } &     0.189   \\
+\textbf{Method:}                   &  Least Squares   & \textbf{  F-statistic:       } &     2.437   \\
+\textbf{Date:}                     & Mon, 06 Jul 2020 & \textbf{  Prob (F-statistic):} &  0.00237    \\
+\textbf{Time:}                     &     23:35:29     & \textbf{  Log-Likelihood:    } &   -108.99   \\
+\textbf{No. Observations:}         &         118      & \textbf{  AIC:               } &     258.0   \\
+\textbf{Df Residuals:}             &          98      & \textbf{  BIC:               } &     313.4   \\
+\textbf{Df Model:}                 &          19      & \textbf{                     } &             \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lcccccc}
+                                   & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{Intercept}                 &       7.5803  &        1.123     &     6.752  &         0.000        &        5.352    &        9.808     \\
+\textbf{Sex[T.Masculino]}          &      -0.0313  &        0.138     &    -0.227  &         0.821        &       -0.305    &        0.243     \\
+\textbf{Race[T.Blanca]}            &       0.2359  &        0.873     &     0.270  &         0.787        &       -1.496    &        1.967     \\
+\textbf{Race[T.Indígena]}          &      -0.6588  &        0.761     &    -0.866  &         0.389        &       -2.169    &        0.851     \\
+\textbf{Race[T.Mestiza]}           &      -0.0915  &        0.715     &    -0.128  &         0.898        &       -1.511    &        1.328     \\
+\textbf{Race[T.Prefiero no decir]} &      -0.8676  &        1.070     &    -0.811  &         0.420        &       -2.992    &        1.257     \\
+\textbf{Student[T.Sí]}             &       0.0152  &        0.242     &     0.063  &         0.950        &       -0.464    &        0.494     \\
+\textbf{Income[T.1601 a 2000]}     &      -0.3181  &        0.250     &    -1.271  &         0.207        &       -0.815    &        0.179     \\
+\textbf{Income[T.2001 o más]}      &      -0.2351  &        0.181     &    -1.296  &         0.198        &       -0.595    &        0.125     \\
+\textbf{Income[T.400 o menos]}     &      -0.5475  &        0.319     &    -1.717  &         0.089        &       -1.180    &        0.085     \\
+\textbf{Income[T.401 a 800]}       &       0.2873  &        0.303     &     0.950  &         0.345        &       -0.313    &        0.888     \\
+\textbf{Income[T.801 a 1200]}      &      -0.1663  &        0.216     &    -0.771  &         0.442        &       -0.594    &        0.262     \\
+\textbf{Intention[T.Generosos]}    &      -0.3569  &        0.301     &    -1.187  &         0.238        &       -0.953    &        0.240     \\
+\textbf{Intention[T.Hostiles]}     &      -0.6393  &        0.268     &    -2.385  &         0.019        &       -1.171    &       -0.107     \\
+\textbf{Intention[T.Interesados]}  &      -0.1219  &        0.200     &    -0.610  &         0.543        &       -0.518    &        0.274     \\
+\textbf{Intention[T.Irracionales]} &      -0.4924  &        0.243     &    -2.024  &         0.046        &       -0.975    &       -0.010     \\
+\textbf{Intention[T.Racionales]}   &      -0.3096  &        0.193     &    -1.600  &         0.113        &       -0.693    &        0.074     \\
+\textbf{Treatment[T.Random]}       &      -0.3996  &        0.138     &    -2.893  &         0.005        &       -0.674    &       -0.126     \\
+\textbf{Risk}                      &      -0.1108  &        0.041     &    -2.697  &         0.008        &       -0.192    &       -0.029     \\
+\textbf{Age}                       &       0.0264  &        0.029     &     0.899  &         0.371        &       -0.032    &        0.085     \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lclc}
+\textbf{Omnibus:}       &  1.588 & \textbf{  Durbin-Watson:     } &    2.036  \\
+\textbf{Prob(Omnibus):} &  0.452 & \textbf{  Jarque-Bera (JB):  } &    1.095  \\
+\textbf{Skew:}          & -0.183 & \textbf{  Prob(JB):          } &    0.578  \\
+\textbf{Kurtosis:}      &  3.298 & \textbf{  Cond. No.          } &     659.  \\
+\bottomrule
+\end{tabular}
+%\caption{OLS Regression Results}
+\end{center}
+
+Warnings: \newline
+ [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\end{document}
